@@ -1,13 +1,14 @@
 package Queue.LinkedQueue;
 
-public interface LinkedQueueInterface <T> {
-    public void enqueue(Node<T> element);
+import Queue.Exceptions.QueueOverFlowException;
+import Queue.Exceptions.QueueUnderFlowException;
 
-    public Node dequeue();
+public interface LinkedQueueInterface<T> {
 
-    public boolean isEmpty();
+    void enqueue(T info) throws QueueOverFlowException;
+    T dequeue() throws QueueUnderFlowException;
 
-    public boolean isFull();
-
-    public int size();
+    boolean isEmpty();
+    boolean isFull();
+    int size();
 }

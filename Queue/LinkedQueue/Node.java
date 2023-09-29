@@ -5,9 +5,9 @@ public class Node<T> {
     private T info;
     private Node<T> link;
 
-    public Node(T info, Node<T> link) {
+    public Node(T info) {
         this.info = info;
-        this.link = link;
+        link = null;
     }
 
     public void setInfo(T info) {
